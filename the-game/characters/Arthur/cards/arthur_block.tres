@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://g0lb0wplvc80"]
+
+[ext_resource type="Script" uid="uid://bbfcad8pcffaq" path="res://custom_resources/card.gd" id="1_dbyas"]
+
+[resource]
+script = ExtResource("1_dbyas")
+id = "arthur_block"
+type = 1
+target = 0
+metadata/_custom_type_script = "uid://bbfcad8pcffaq"
