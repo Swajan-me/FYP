@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://g0lb0wplvc80"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://g0lb0wplvc80"]
 
-[ext_resource type="Script" uid="uid://bbfcad8pcffaq" path="res://custom_resources/card.gd" id="1_dbyas"]
+[ext_resource type="Texture2D" uid="uid://us53bpn0pwl1" path="res://art/shield.png" id="1_ewbxf"]
+[ext_resource type="Script" uid="uid://dw44m7g3jn80p" path="res://characters/Arthur/cards/arthur_block.gd" id="2_ewbxf"]
 
 [resource]
-script = ExtResource("1_dbyas")
+script = ExtResource("2_ewbxf")
 id = "arthur_block"
 type = 1
 target = 0
+cost = 1
+icon = ExtResource("1_ewbxf")
+tooltip_text = "[center]Gain [color=\"40FF40\"]5[/color] shield.[/center]"
 metadata/_custom_type_script = "uid://bbfcad8pcffaq"

@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://djekaj0x5i8"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://djekaj0x5i8"]
 
-[ext_resource type="Script" uid="uid://bbfcad8pcffaq" path="res://custom_resources/card.gd" id="1_7iuam"]
+[ext_resource type="Texture2D" uid="uid://mrtfao3d22g8" path="res://art/weapons/sword.png" id="1_4yu1y"]
+[ext_resource type="Script" uid="uid://cbfi84rq6b8vx" path="res://characters/Arthur/cards/arthur_melee_attack.gd" id="2_4yu1y"]
 
 [resource]
-script = ExtResource("1_7iuam")
+script = ExtResource("2_4yu1y")
 id = "arthur_melee_attack"
 type = 0
 target = 1
+cost = 1
+icon = ExtResource("1_4yu1y")
+tooltip_text = "[center]Deal [color=\"FF0000\"]6[/color] damage. [/center]"
 metadata/_custom_type_script = "uid://bbfcad8pcffaq"
