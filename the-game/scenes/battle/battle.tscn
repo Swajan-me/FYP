@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://ff1i38vdpv6x"]
+[gd_scene load_steps=16 format=3 uid="uid://ff1i38vdpv6x"]
 
 [ext_resource type="Texture2D" uid="uid://bsdjxdyuik5a" path="res://art/game_background_1.png" id="1_7gynk"]
+[ext_resource type="Script" uid="uid://phono7uv6elv" path="res://scenes/battle/battle.gd" id="1_kd6yx"]
 [ext_resource type="PackedScene" uid="uid://b61iws86nuk20" path="res://scenes/enemy/enemy.tscn" id="2_agsc7"]
 [ext_resource type="PackedScene" uid="uid://dljvy646l884l" path="res://scenes/card_ui/card_states/card_ui.tscn" id="2_ffvsa"]
 [ext_resource type="Script" uid="uid://c252mqgdjfw3k" path="res://scenes/ui/hand.gd" id="2_xd4uy"]
@@ -10,11 +11,16 @@
 [ext_resource type="Resource" uid="uid://byr1rj2vu2x1o" path="res://characters/Arthur/arthur.tres" id="4_agsc7"]
 [ext_resource type="Resource" uid="uid://djekaj0x5i8" path="res://characters/Arthur/cards/arthur_melee_attack.tres" id="5_pll4o"]
 [ext_resource type="Resource" uid="uid://g0lb0wplvc80" path="res://characters/Arthur/cards/arthur_block.tres" id="6_py4tk"]
+[ext_resource type="Script" uid="uid://d2afd544yxpec" path="res://scenes/ui/battle_ui.gd" id="8_t1kk3"]
+[ext_resource type="PackedScene" uid="uid://c573hlsyj82mw" path="res://scenes/ui/mana_ui.tscn" id="11_fisqk"]
+[ext_resource type="PackedScene" uid="uid://d1fhvqmxfbyc8" path="res://scenes/ui/tooltip.tscn" id="12_mxe8n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7gynk"]
 size = Vector2(1280, 480)
 
 [node name="Battle" type="Node2D"]
+script = ExtResource("1_kd6yx")
+char_stats = ExtResource("4_agsc7")
 metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -43,6 +49,7 @@ stats = ExtResource("4_agsc7")
 [node name="CardTargetSelector" parent="." instance=ExtResource("3_pll4o")]
 
 [node name="BattleUI" type="CanvasLayer" parent="." groups=["ui_layer"]]
+script = ExtResource("8_t1kk3")
 
 [node name="Hand" type="HBoxContainer" parent="BattleUI"]
 anchors_preset = 7
@@ -61,11 +68,21 @@ script = ExtResource("2_xd4uy")
 [node name="CardUI" parent="BattleUI/Hand" instance=ExtResource("2_ffvsa")]
 layout_mode = 2
 card = ExtResource("5_pll4o")
+char_stats = ExtResource("4_agsc7")
 
 [node name="CardUI2" parent="BattleUI/Hand" instance=ExtResource("2_ffvsa")]
 layout_mode = 2
 card = ExtResource("5_pll4o")
+char_stats = ExtResource("4_agsc7")
 
 [node name="CardUI3" parent="BattleUI/Hand" instance=ExtResource("2_ffvsa")]
 layout_mode = 2
 card = ExtResource("6_py4tk")
+char_stats = ExtResource("4_agsc7")
+
+[node name="ManaUI" parent="BattleUI" instance=ExtResource("11_fisqk")]
+char_stats = ExtResource("4_agsc7")
+
+[node name="Tooltip" parent="BattleUI" instance=ExtResource("12_mxe8n")]
+offset_top = 20.0
+offset_bottom = 170.0

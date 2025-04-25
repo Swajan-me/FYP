@@ -3,14 +3,14 @@ extends CardState
 var played: bool
 
 func enter() -> void:
-	card_ui.color.color = Color.WEB_PURPLE
-	card_ui.state.text = "Released"
 
 	played = false
 
 	if not card_ui.targets.is_empty():
+		# The emit code below allows to remove the tooltip is the card is played.
+		Events.tooltip_hide_requested.emit()
 		played = true
-		print("play card for target(s)", card_ui.targets)
+		card_ui.play()
 		
 func on_input(_event: InputEvent) -> void:
 	if played:

@@ -3,8 +3,6 @@ extends CardState
 const MOUSE_Y_SNAPBACK_THRESHOLD := 1500
 
 func enter() -> void:
-	card_ui.color.color = Color.DARK_GOLDENROD
-	card_ui.state.text = "Aiming"
 	card_ui.targets.clear()
 	#animate to the center of the hand
 	var offset := Vector2(card_ui.parent.size.x / 2, -card_ui.size.y / 2)
