@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://g0lb0wplvc80"]
 
-[ext_resource type="Texture2D" uid="uid://us53bpn0pwl1" path="res://art/shield.png" id="1_ewbxf"]
+[ext_resource type="Texture2D" uid="uid://54djohu0jj8h" path="res://art/weapons/shield.png" id="1_ewbxf"]
 [ext_resource type="Script" uid="uid://dw44m7g3jn80p" path="res://characters/Arthur/cards/arthur_block.gd" id="2_ewbxf"]
 
 [resource]
