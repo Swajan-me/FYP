@@ -2,9 +2,9 @@
 
 [ext_resource type="Theme" uid="uid://b5l2tkoo5euy4" path="res://main_theme.tres" id="1_gy3gl"]
 [ext_resource type="Script" uid="uid://r8qxqodd5vds" path="res://scenes/card_ui/card_states/card_ui.gd" id="2_els2s"]
-[ext_resource type="Texture2D" uid="uid://mrtfao3d22g8" path="res://art/weapons/sword.png" id="3_14xfw"]
 [ext_resource type="StyleBox" uid="uid://cigdvx67ob4hu" path="res://scenes/card_ui/card_base_stylebox.tres" id="3_bqppd"]
 [ext_resource type="Script" uid="uid://l3w2gkdlvjuv" path="res://scenes/card_ui/card_states/card_state_machine.gd" id="3_psaan"]
+[ext_resource type="Texture2D" uid="uid://bm7fl2qupbesi" path="res://art/weapons/sword1.png" id="4_bqppd"]
 [ext_resource type="Script" uid="uid://84wrmjoraxrn" path="res://scenes/card_ui/card_states/card_base_state.gd" id="4_orrkt"]
 [ext_resource type="Script" uid="uid://dusxdnrjtu4bl" path="res://scenes/card_ui/card_states/card_clicked_state.gd" id="5_yxx8x"]
 [ext_resource type="Script" uid="uid://elgh1otqvf5g" path="res://scenes/card_ui/card_states/card_dragging_state.gd" id="6_ci03s"]
@@ -52,14 +52,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -22.5
-offset_top = -30.0
-offset_right = 22.5
-offset_bottom = 30.0
+offset_left = -28.0
+offset_top = -39.0
+offset_right = 27.0
+offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("3_14xfw")
+texture = ExtResource("4_bqppd")
 stretch_mode = 5
 
 [node name="DropPointDetector" type="Area2D" parent="."]

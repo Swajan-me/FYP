@@ -3,12 +3,30 @@ extends Node2D
 # characterStats will be distributed from here to all the other parts of the code.
 @export var char_stats: CharacterStats
 
-@onready var battle_ui: BattleUI = $BattleUI
+@onready var battle_ui: BattleUI = $BattleUI as BattleUI
+@onready var player_handler: PlayerHandler = $PlayerHandler as PlayerHandler
+@onready var enemy_handler: EnemyHandler = $EnemyHandler as EnemyHandler
+@onready var player: Player = $Player as Player
 
 func _ready() -> void:
 	# inorder to not reset the health, mana this is called.
 	var new_stats: CharacterStats = char_stats.create_instance()
 	battle_ui.char_stats = new_stats
+	player.stats = new_stats
+	
+	Events.enemy_turn_ended.connect(_on_enemy_turn_ended)
+	
+	Events.player_turn_ended.connect(player_handler.end_turn)
+	#Events.player_hand_discarded.connect(player_handler.start_turn) # Temporary code, have to change it to enemy.
+	Events.player_hand_discarded.connect(enemy_handler.start_turn)
+	# Without start_battle the print msg will not be shown
+	start_battle(new_stats)
 
 func start_battle(stats: CharacterStats) -> void:
-	print ("Battle has started.")
+	#print ("Battle has started.")
+	enemy_handler.reset_enemy_actions()
+	player_handler.start_battle(stats)
+
+func _on_enemy_turn_ended() -> void:
+	player_handler.start_turn()
+	enemy_handler.reset_enemy_actions()
