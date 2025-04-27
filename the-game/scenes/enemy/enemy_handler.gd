@@ -19,6 +19,7 @@ func start_turn() -> void:
 	first_enemy.do_turn()
 
 func _on_enemy_action_completed(enemy: Enemy) -> void:
+	
 	if enemy.get_index() == get_child_count() - 1:
 		Events.enemy_turn_ended.emit()
 		return

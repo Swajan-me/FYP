@@ -35,7 +35,7 @@ func setup_ai() -> void:
 	if enemy_action_picker:
 		enemy_action_picker.queue_free()
 	
-	var new_action_picker : EnemyActionPicker = stats.ai.instantiate() as EnemyActionPicker
+	var new_action_picker : EnemyActionPicker = stats.ai.instantiate() 
 	add_child(new_action_picker)
 	enemy_action_picker = new_action_picker
 	enemy_action_picker.enemy = self
@@ -67,6 +67,10 @@ func update_enemy() -> void:
 	update_stats()
 
 func do_turn() -> void:
+	
+	if not current_action:
+		current_action = enemy_action_picker.get_action()
+	
 	stats.block = 0
 	
 	if not current_action:

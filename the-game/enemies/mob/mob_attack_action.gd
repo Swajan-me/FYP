@@ -3,6 +3,8 @@ extends EnemyAction
 @export var damage := 7
 
 func perform_action() -> void:
+	print("[EnemyAction] Performing attack. Enemy: ", enemy, ", Target: ", target)
+	
 	if not enemy or not target:
 		return
 	
@@ -21,5 +23,6 @@ func perform_action() -> void:
 	
 	tween.finished.connect(
 		func():
+			print("[EnemyAction] Finished action, emitting enemy_action_completed")
 			Events.enemy_action_completed.emit(enemy)
 	)

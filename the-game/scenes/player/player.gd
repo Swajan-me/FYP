@@ -40,5 +40,6 @@ func take_damage(damage: int) -> void:
 	
 	stats.take_damage(damage)	#damage to the player.
 	
-	if stats.health <= 0:		
+	if stats.health <= 0:
+		Events.player_died.emit()
 		queue_free()
