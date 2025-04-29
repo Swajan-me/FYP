@@ -16,6 +16,7 @@ signal tooltip_hide_requested   # Just play the hide animation
 signal player_hand_drawn
 signal player_hand_discarded
 signal player_turn_ended
+signal player_hit
 signal player_died
 
 # For Enemy-related events:
