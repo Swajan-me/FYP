@@ -21,6 +21,12 @@ func reset_mana() -> void:
 func can_play_card(card: Card) -> bool:
 	return mana >= card.cost
 
+func take_damage(damage: int) -> void:
+	var initial_health := health
+	super.take_damage(damage)          # calling from parent class; Stats
+	if initial_health > health:     # If the initial HP > than the current one then the red flash occurs.
+		Events.player_hit.emit()
+
 func create_instance() -> Resource:
 	var instance: CharacterStats = self.duplicate()   
 	instance.health = max_health
