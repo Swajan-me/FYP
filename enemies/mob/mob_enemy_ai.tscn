@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://bwyndkopuwrnx" path="res://custom_resources/intent.gd" id="4_lljy5"]
 [ext_resource type="Script" uid="uid://bjmuv4ccrvnh0" path="res://enemies/mob/mob_mega_block_action.gd" id="4_y8vls"]
 [ext_resource type="AudioStream" uid="uid://dn34hsnmbjbj1" path="res://art/music/slash sound effect.mp3" id="5_b3bag"]
-[ext_resource type="Texture2D" uid="uid://us53bpn0pwl1" path="res://art/shield.png" id="6_b3bag"]
+[ext_resource type="Texture2D" uid="uid://dr7w5o8s3fs2l" path="res://art/weapons/bigShield.png" id="7_b3bag"]
 [ext_resource type="Texture2D" uid="uid://54djohu0jj8h" path="res://art/weapons/shield.png" id="8_gr3pf"]
 [ext_resource type="AudioStream" uid="uid://cvurgsdfojfub" path="res://art/music/block sound effect.ogg" id="8_m2b8y"]
 
@@ -20,13 +20,13 @@ metadata/_custom_type_script = "uid://bwyndkopuwrnx"
 [sub_resource type="Resource" id="Resource_3rngc"]
 script = ExtResource("4_lljy5")
 number = ""
-icon = ExtResource("6_b3bag")
+icon = ExtResource("8_gr3pf")
 metadata/_custom_type_script = "uid://bwyndkopuwrnx"
 
 [sub_resource type="Resource" id="Resource_dxihf"]
 script = ExtResource("4_lljy5")
 number = ""
-icon = ExtResource("8_gr3pf")
+icon = ExtResource("7_b3bag")
 metadata/_custom_type_script = "uid://bwyndkopuwrnx"
 
 [node name="MobEnemyAI" type="Node"]
