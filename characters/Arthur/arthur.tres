@@ -6,9 +6,17 @@
 
 [resource]
 script = ExtResource("1_qo1ch")
+character_name = "Hero"
+description = "- Likes to fight against evil.
+- Wishes to Slay the boss.
+- Currently unemployed
+- Had to redo his project 
+	because godot 4.4 was bugged
+	which made his project unable to run."
+portrait = ExtResource("1_g66gv")
 starting_deck = ExtResource("3_wq4yb")
 cards_per_turn = 4
 max_mana = 3
-max_health = 35
+max_health = 45
 art = ExtResource("1_g66gv")
 metadata/_custom_type_script = "uid://bp251xhq6eb0r"
