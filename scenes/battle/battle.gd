@@ -4,6 +4,8 @@ extends Node2D
 @export var char_stats: CharacterStats
 @export var music: AudioStream
 
+@export var next_battle_scene: PackedScene
+
 @onready var battle_ui: BattleUI = $BattleUI 
 @onready var player_handler: PlayerHandler = $PlayerHandler 
 @onready var enemy_handler: EnemyHandler = $EnemyHandler 
@@ -23,13 +25,17 @@ func _ready() -> void:
 	Events.player_hand_discarded.connect(enemy_handler.start_turn)
 	Events.player_died.connect(_on_player_died)
 	
+	Events.battle_won.connect(_on_battle_won)
 	# Without start_battle the print msg will not be shown
 	start_battle(new_stats)
 
 func _on_enemies_child_order_changed() -> void:
 	if enemy_handler.get_child_count() == 0:
 		#print("Victory!")
-		Events.battle_over_screen_requested.emit("Victory", BattleOverPanel.Type.WIN)
+		Events.battle_over_screen_requested.emit("Victory !", BattleOverPanel.Type.WIN)
+
+
+
 
 func start_battle(stats: CharacterStats) -> void:
 	get_tree().paused = false   # This helps to prevent a bug in the restart where the cards were not showing.
@@ -45,3 +51,9 @@ func _on_enemy_turn_ended() -> void:
 func _on_player_died() -> void:
 	#print("dead!")
 	Events.battle_over_screen_requested.emit("Game Over!", BattleOverPanel.Type.LOSE)
+
+func _on_battle_won() -> void:
+	if next_battle_scene:
+		get_tree().change_scene_to_packed(next_battle_scene)
+	else:
+		print("No next battle scene set — maybe show final victory screen here.")

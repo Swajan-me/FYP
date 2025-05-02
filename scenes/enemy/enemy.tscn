@@ -27,14 +27,16 @@ texture = ExtResource("2_40wdo")
 shape = SubResource("RectangleShape2D_agsc7")
 
 [node name="StatsUI" parent="." instance=ExtResource("3_tjssy")]
-offset_top = 56.0
-offset_bottom = 136.0
+offset_left = -229.0
+offset_top = 55.0
+offset_right = 197.0
+offset_bottom = 135.0
 
 [node name="IntentUI" parent="." instance=ExtResource("5_gl05p")]
 offset_left = -37.0
-offset_top = -104.0
+offset_top = -119.0
 offset_right = 33.0
-offset_bottom = -54.0
+offset_bottom = -69.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

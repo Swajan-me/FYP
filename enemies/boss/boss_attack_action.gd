@@ -1,6 +1,6 @@
 extends EnemyAction
 
-@export var damage := 4
+@export var damage := 10
 
 func perform_action() -> void:
 	if not enemy or not target:
@@ -15,12 +15,8 @@ func perform_action() -> void:
 	damage_effect.sound = sound
 	
 	tween.tween_property(enemy, "global_position", end, 0.4)
-	
-	# number of attacks for the boss, this repeat this whole segment to increase the number of times the boss would hit
 	tween.tween_callback(damage_effect.execute.bind(target_array))
 	tween.tween_interval(0.35)
-	tween.tween_callback(damage_effect.execute.bind(target_array))
-	tween.tween_interval(0.25)
 	tween.tween_property(enemy, "global_position", start, 0.4)
 	
 	#SFXPlayer.play(sound)
@@ -32,4 +28,3 @@ func perform_action() -> void:
 		func():
 			Events.enemy_action_completed.emit(enemy)
 	)
-# Open-source code which allows enemy actions to be created without hastle

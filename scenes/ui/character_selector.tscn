@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://jqmboa5fiyk1"]
+[gd_scene load_steps=11 format=3 uid="uid://jqmboa5fiyk1"]
 
 [ext_resource type="Script" uid="uid://d0jryhxsromir" path="res://scenes/ui/character_selector.gd" id="1_als7e"]
+[ext_resource type="Resource" uid="uid://w4wjahfervbo" path="res://scenes/run/run_startup.tres" id="2_to3sr"]
 [ext_resource type="Texture2D" uid="uid://cr3krjsuiw5l0" path="res://art/mc.png" id="2_txrk6"]
 [ext_resource type="Texture2D" uid="uid://bm7fl2qupbesi" path="res://art/weapons/sword1.png" id="3_als7e"]
 [ext_resource type="Texture2D" uid="uid://chqudnva3wogb" path="res://art/weapons/aoe.png" id="4_to3sr"]
@@ -32,6 +33,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_als7e")
+run_startup = ExtResource("2_to3sr")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1

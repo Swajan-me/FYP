@@ -1,6 +1,7 @@
 extends Control
 
-#const RUN_SCENE = preload("res://scenes/run/run.tscn")
+const RUN_SCENE = preload("res://scenes/battle/battle.tscn")
+
 const WARRIOR_STATS := preload("res://characters/Arthur/arthur.tres")
 const ASSASSIN_STATS := preload("res://characters/Ninja/ninja.tres")
 
@@ -25,7 +26,8 @@ func _on_start_button_pressed() -> void:
 	print("New Run with %s" % current_character.character_name)
 	run_startup.type = RunStartup.Type.NEW_RUN
 	run_startup.picked_character = current_character
-	#get_tree().change_scene_to_packed(RUN_SCENE)
+	get_tree().change_scene_to_packed(RUN_SCENE)
+
 
 func _on_arthur_button_pressed() -> void:
 	current_character = WARRIOR_STATS
