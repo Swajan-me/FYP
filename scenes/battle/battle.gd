@@ -52,6 +52,8 @@ func _on_player_died() -> void:
 	#print("dead!")
 	Events.battle_over_screen_requested.emit("Game Over!", BattleOverPanel.Type.LOSE)
 
+	Global.player_health = player.stats.health
+
 func _on_battle_won() -> void:
 	if next_battle_scene:
 		get_tree().change_scene_to_packed(next_battle_scene)

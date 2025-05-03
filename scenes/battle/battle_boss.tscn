@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://bl0geytuokt7u"]
+[gd_scene load_steps=20 format=3 uid="uid://bl0geytuokt7u"]
 
 [ext_resource type="Script" uid="uid://phono7uv6elv" path="res://scenes/battle/battle.gd" id="1_uthpq"]
 [ext_resource type="Resource" uid="uid://byr1rj2vu2x1o" path="res://characters/Arthur/arthur.tres" id="2_mk1im"]
-[ext_resource type="AudioStream" uid="uid://c6ytji47otuy3" path="res://art/music/BossBattle - League of Legends - Dark Cosmic Jhin Theme (Xeybay Remix).mp3" id="3_uthpq"]
+[ext_resource type="AudioStream" uid="uid://ipangynlx1x5" path="res://art/music/boss - Swain, the Noxian Grand General  Login Screen - League of Legends.mp3" id="3_mk1im"]
 [ext_resource type="Texture2D" uid="uid://bsdjxdyuik5a" path="res://art/game_background_1.png" id="4_37455"]
+[ext_resource type="PackedScene" uid="uid://dnadhedvxuywx" path="res://global/ending_screen.tscn" id="4_mk1im"]
 [ext_resource type="Script" uid="uid://cwviq5xlwwxrj" path="res://scenes/enemy/enemy_handler.gd" id="5_l8n8b"]
 [ext_resource type="PackedScene" uid="uid://b61iws86nuk20" path="res://scenes/enemy/enemy.tscn" id="6_k86kn"]
 [ext_resource type="Resource" uid="uid://c0xay0gsei1j" path="res://enemies/boss/boss_enemy.tres" id="7_uthpq"]
@@ -24,7 +25,8 @@ size = Vector2(1280, 480)
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_uthpq")
 char_stats = ExtResource("2_mk1im")
-music = ExtResource("3_uthpq")
+music = ExtResource("3_mk1im")
+next_battle_scene = ExtResource("4_mk1im")
 metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="."]

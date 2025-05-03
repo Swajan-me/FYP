@@ -1,0 +1,10 @@
+extends Control
+
+const MAIN_MENU := preload("res://scenes/ui/main_menu.tscn")
+
+# 
+func _ready() -> void:
+	get_tree().paused = false
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_packed(MAIN_MENU)
