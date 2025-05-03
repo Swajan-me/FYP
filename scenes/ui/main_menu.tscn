@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://bjqwopt1sp874"]
+[gd_scene load_steps=17 format=3 uid="uid://bjqwopt1sp874"]
 
 [ext_resource type="Script" uid="uid://dhkyjqu040n8t" path="res://scenes/ui/main_menu.gd" id="1_uhagc"]
 [ext_resource type="Texture2D" uid="uid://cr3krjsuiw5l0" path="res://art/mc.png" id="1_x2yvf"]
+[ext_resource type="AudioStream" uid="uid://datctnkk7ugr6" path="res://art/music/home - Jhin, the Virtuoso  Login Screen - League of Legends.mp3" id="2_8ekit"]
 [ext_resource type="Texture2D" uid="uid://chqudnva3wogb" path="res://art/weapons/aoe.png" id="2_otr3d"]
 [ext_resource type="Texture2D" uid="uid://f1ne03y50rsv" path="res://art/ninja.png" id="2_uhagc"]
 [ext_resource type="Texture2D" uid="uid://s6debd4oobos" path="res://art/drone.png" id="3_btxxm"]
@@ -33,6 +34,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uhagc")
+music = ExtResource("2_8ekit")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -80,6 +82,11 @@ theme_override_constants/separation = 15
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 text = "New Game"
+
+[node name="Tutorial" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+text = "Tutorial"
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 75)
@@ -162,4 +169,5 @@ scale = Vector2(4, 4)
 texture = ExtResource("5_q85j6")
 
 [connection signal="pressed" from="VBoxContainer/New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
