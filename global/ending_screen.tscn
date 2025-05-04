@@ -77,17 +77,27 @@ position = Vector2(244, 482)
 scale = Vector2(5, 5)
 texture = ExtResource("1_ammi2")
 
-[node name="Character2" type="Sprite2D" parent="."]
-position = Vector2(360, 155)
-scale = Vector2(5, 5)
-texture = ExtResource("2_4aj3i")
-
-[node name="Character3" type="Sprite2D" parent="."]
-position = Vector2(153, 148)
-scale = Vector2(5, 5)
+[node name="heart" type="Sprite2D" parent="Character"]
+position = Vector2(-10.6, -58.4)
 texture = ExtResource("3_fucje")
 
-[node name="Button" type="Button" parent="."]
+[node name="Duck" type="Sprite2D" parent="Character"]
+position = Vector2(148.8, 3.4)
+texture = ExtResource("2_4aj3i")
+
+[node name="heart2" type="Sprite2D" parent="Character"]
+position = Vector2(20.6, -59.6)
+texture = ExtResource("3_fucje")
+
+[node name="heart3" type="Sprite2D" parent="Character"]
+position = Vector2(41, -40.8)
+texture = ExtResource("3_fucje")
+
+[node name="heart4" type="Sprite2D" parent="Character"]
+position = Vector2(-28.2, -41.2)
+texture = ExtResource("3_fucje")
+
+[node name="Menu" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -103,4 +113,21 @@ grow_vertical = 0
 scale = Vector2(1.2, 1.2)
 text = "Return to Main Menu"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -464.0
+offset_top = -73.0
+offset_right = -164.0
+offset_bottom = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.2, 1.2)
+text = "Exit "
+
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

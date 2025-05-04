@@ -1,7 +1,7 @@
 extends Node2D
 
 # characterStats will be distributed from here to all the other parts of the code.
-@export var char_stats: CharacterStats
+#@export var char_stats: CharacterStats
 @export var music: AudioStream
 
 @export var next_battle_scene: PackedScene
@@ -11,8 +11,13 @@ extends Node2D
 @onready var enemy_handler: EnemyHandler = $EnemyHandler 
 @onready var player: Player = $Player 
 
+var char_stats: CharacterStats
+
 func _ready() -> void:
 	# inorder to not reset the health, mana this is called.
+	#var new_stats: CharacterStats = char_stats.create_instance()
+	
+	char_stats = Global.picked_character
 	var new_stats: CharacterStats = char_stats.create_instance()
 	battle_ui.char_stats = new_stats
 	player.stats = new_stats

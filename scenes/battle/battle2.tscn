@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bkn5d2dt2sok8"]
+[gd_scene load_steps=22 format=3 uid="uid://bkn5d2dt2sok8"]
 
 [ext_resource type="Script" uid="uid://phono7uv6elv" path="res://scenes/battle/battle.gd" id="1_iq1m8"]
 [ext_resource type="Resource" uid="uid://byr1rj2vu2x1o" path="res://characters/Arthur/arthur.tres" id="2_ga14e"]
@@ -23,9 +23,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7gynk"]
 size = Vector2(1280, 480)
 
+[sub_resource type="LabelSettings" id="LabelSettings_ga14e"]
+font_size = 40
+font_color = Color(0.481321, 0.249581, 0.719975, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_iq1m8")
-char_stats = ExtResource("2_ga14e")
 music = ExtResource("3_a56mb")
 next_battle_scene = ExtResource("4_ga14e")
 metadata/_edit_lock_ = true
@@ -52,13 +57,13 @@ script = ExtResource("5_fer2j")
 position = Vector2(875, 348)
 stats = ExtResource("7_3v1uu")
 
-[node name="Enemy2" parent="EnemyHandler" instance=ExtResource("6_lgntd")]
-position = Vector2(1165, 348)
-stats = ExtResource("7_3v1uu")
-
 [node name="DroneEnemy" parent="EnemyHandler" instance=ExtResource("6_lgntd")]
 position = Vector2(1023, 242)
 stats = ExtResource("8_iykh1")
+
+[node name="Enemy2" parent="EnemyHandler" instance=ExtResource("6_lgntd")]
+position = Vector2(1165, 348)
+stats = ExtResource("7_3v1uu")
 
 [node name="Player" parent="." instance=ExtResource("9_kqe3k")]
 position = Vector2(366, 330)
@@ -136,3 +141,11 @@ layer = 2
 
 [node name="BattleOverPanel" parent="BattleOverLayer" instance=ExtResource("18_1ykhx")]
 visible = false
+
+[node name="RoundLable" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 36.0
+text = "Round 2"
+label_settings = SubResource("LabelSettings_ga14e")
+horizontal_alignment = 1
+vertical_alignment = 1
