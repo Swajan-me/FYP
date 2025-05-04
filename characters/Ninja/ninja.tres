@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("1_06aon")
 character_name = "Ninja"
-description = "- Old but wise.
+description = "- Lower Hp than Hero.
 - Slaying the boss will give
 	 him his freedom.
 - Job hunt is hard for him.
