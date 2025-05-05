@@ -61,9 +61,9 @@ stats = ExtResource("7_3v1uu")
 position = Vector2(1023, 242)
 stats = ExtResource("8_iykh1")
 
-[node name="Enemy2" parent="EnemyHandler" instance=ExtResource("6_lgntd")]
-position = Vector2(1165, 348)
-stats = ExtResource("7_3v1uu")
+[node name="DroneEnemy2" parent="EnemyHandler" instance=ExtResource("6_lgntd")]
+position = Vector2(1143, 342)
+stats = ExtResource("8_iykh1")
 
 [node name="Player" parent="." instance=ExtResource("9_kqe3k")]
 position = Vector2(366, 330)

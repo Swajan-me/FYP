@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ff1i38vdpv6x"]
+[gd_scene load_steps=21 format=3 uid="uid://ff1i38vdpv6x"]
 
 [ext_resource type="Script" uid="uid://phono7uv6elv" path="res://scenes/battle/battle.gd" id="1_kd6yx"]
 [ext_resource type="PackedScene" uid="uid://b61iws86nuk20" path="res://scenes/enemy/enemy.tscn" id="2_agsc7"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://cksjmpqoqdp5r" path="res://art/bg2.png" id="4_mvulk"]
 [ext_resource type="PackedScene" uid="uid://bkn5d2dt2sok8" path="res://scenes/battle/battle2.tscn" id="4_w40i5"]
 [ext_resource type="Resource" uid="uid://bg7mrilbqnc7b" path="res://enemies/mob/mob_enemy.tres" id="6_kd6yx"]
-[ext_resource type="Resource" uid="uid://odmm01ealfbc" path="res://enemies/drone/drone_enemy.tres" id="8_mvulk"]
 [ext_resource type="Script" uid="uid://tlh4w0qreww8" path="res://scenes/player/player_handler.gd" id="8_mxe8n"]
 [ext_resource type="Script" uid="uid://d2afd544yxpec" path="res://scenes/ui/battle_ui.gd" id="8_t1kk3"]
 [ext_resource type="PackedScene" uid="uid://c573hlsyj82mw" path="res://scenes/ui/mana_ui.tscn" id="11_fisqk"]
@@ -65,13 +64,9 @@ script = ExtResource("4_kd6yx")
 position = Vector2(875, 348)
 stats = ExtResource("6_kd6yx")
 
-[node name="DroneEnemy" parent="EnemyHandler" instance=ExtResource("2_agsc7")]
-position = Vector2(1023, 242)
-stats = ExtResource("8_mvulk")
-
-[node name="DroneEnemy2" parent="EnemyHandler" instance=ExtResource("2_agsc7")]
-position = Vector2(1159, 356)
-stats = ExtResource("8_mvulk")
+[node name="Enemy2" parent="EnemyHandler" instance=ExtResource("2_agsc7")]
+position = Vector2(1079, 348)
+stats = ExtResource("6_kd6yx")
 
 [node name="Player" parent="." instance=ExtResource("3_py4tk")]
 position = Vector2(366, 330)
