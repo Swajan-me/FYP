@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The Last Draw: Card Slayer"
-run/main_scene="uid://ff1i38vdpv6x"
+run/main_scene="uid://bjqwopt1sp874"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://rpyhews3k6uv"
 
@@ -27,6 +27,7 @@ Global="*res://global/global.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/mode=3
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
@@ -57,3 +58,5 @@ right_mouse={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
